@@ -1,0 +1,22 @@
+# Java
+*.class
+*.log
+*.jar
+*.war
+*.ear
+target/
+
+# IDE
+.idea/
+*.iml
+*.iws
+*.ipr
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Allure
+allure-results/
+allure-report/
