@@ -24,10 +24,19 @@ This project automates a functional test case using **Java 21**, **Selenide**, *
 
 ### Allure Report Integration 
 
-Test steps and top 5 cast names are automatically logged into the Allure report for visibility and traceability.
+Test steps and the top 5 cast member names are automatically logged into the Allure report using `Allure.step(...)`.
 
 To generate the report:
 
+1. Make sure you have Allure installed:
+   - **Windows (Scoop):** `scoop install allure`
+   - **macOS (Homebrew):** `brew install allure`
+   - Or download manually: [https://github.com/allure-framework/allure2](https://github.com/allure-framework/allure2)
+
+2. Run the tests and serve the Allure report locally
+
 ```bash
+mvn clean test
+---
 allure serve allure-results
->>>>>>> 469509f98484336ca88b3ade2c6248a4e7dd07cb
+
