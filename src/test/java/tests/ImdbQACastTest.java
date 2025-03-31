@@ -46,7 +46,11 @@ public class ImdbQACastTest {
                     String href = el.getAttribute("href");
                     return href != null && href.contains("/name/");
                 })
-                .map(el -> el.getAttribute("aria-label").trim())
+                .map(el -> {
+                    String label = el.getAttribute("aria-label");
+                    return label != null ? label.trim() : "";
+                })
+                .filter(name -> !name.isEmpty())
                 .distinct()
                 .limit(5)
                 .collect(Collectors.toList());
